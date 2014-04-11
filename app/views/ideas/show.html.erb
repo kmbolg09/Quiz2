@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div>
+<p>
+  <strong>Name:</strong>
+  <%= @idea.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @idea.description %>
+</p>
+<p> Add a Comment </p>
+<%= form_for @comment do |f| %>
+  <%=f.text_area :body %>
+  <%= f.submit "Submit" %>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
